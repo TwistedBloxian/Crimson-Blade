@@ -1,0 +1,301 @@
+body{
+    background-color: #f0f0f0;
+    font-family: 'Courier New', monospace;
+    background: #1a1a1a;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.ui{
+    display: flex;
+    justify-content: space-between;
+    width: 480px;
+}
+
+#grid{
+    height: 432px;
+    width: 480px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
+    /*Dette gøre at Alle div i grid skifte række*/
+    display: flex;
+    flex-wrap: wrap;
+    /*My background*/
+    background:url(MapElements/map\ \(1\).png);
+   /* Original background
+    background:url(images/u4DVsx6.png);*/
+    background-size: cover;
+    position: relative;
+    padding: 0;
+}
+
+#grid div{
+    width: 48px;
+    height: 48px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.link-going-up, .link-going-down, .link-going-left, .link-going-right{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    z-index: 10;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*Dette er spillerens billede, og de forskellige retninger som spilleren kan gå i*/
+/* The original assets for main character
+.link-going-up{
+    background-image: url(images/UkV0we0.png);
+}
+.link-going-down{
+    background-image: url(images/tVtlP6y.png);
+}   
+.link-going-left{
+    background-image: url(images/1Xq9biB.png);
+}
+.link-going-right{
+    background-image: url(images/yZIb8O2.png);
+}
+    */
+/*My Assets for main character*/
+    
+.link-going-up{
+    background-image: url(MainCharacter/Walk-forward.gif);
+}
+.link-going-down{
+    background-image: url(MainCharacter/Walk-Backward.gif);
+}   
+.link-going-left{
+    background-image: url(MainCharacter/Left.png);
+}
+.link-going-right{
+    background-image: url(MainCharacter/Right.png);
+}
+
+
+/*Dette er alle de forskellige vægge og døre i spillet, og*/
+
+.left-wall{
+    background-image: url(MapElements/Left-fence.png);
+}
+.top-wall{
+    background-image: url(MapElements/Top-fence.png);
+}
+.bottom-wall{
+    background-image: url(MapElements/Bottom-fence.png);
+}
+.right-wall{
+    background-image: url(MapElements/Right-fence.png);
+}
+.bottom-left-wall{
+    background-image: url(MapElements/Bottom-left-fence.png);
+}
+.bottom-right-wall{
+    background-image: url(MapElements/Bottom-right-fence.png);
+}
+.top-left-wall{
+    background-image: url(MapElements/Top-left-fence.png);
+}
+.top-right-wall{
+    background-image: url(MapElements/Top-right-fence.png);
+}
+.top-door{
+    background-image: url(MapElements/Top-door.png);
+}
+.left-door{
+    background-image: url(MapElements/Left-door.png);
+}
+.stairs{
+    background-image: url(MapElements/Burrow.png);
+}
+.firepot{
+    background-image: url(MapElements/Tree.png);
+}
+.top-right-house{
+    background-image: url(MapElements/Top-right-house.png);
+}
+.top-left-house{
+    background-image: url(MapElements/Top-left-house.png);
+}
+.bottom-right-house{
+    background-image: url(MapElements/Bottom-right-house.png);
+}
+.bottom-left-house{
+    background-image: url(MapElements/Bottom-left-house.png);
+}
+.top-left-water{
+    background-image: url(MapElements/Top-left-water.gif);
+}
+.top-right-water{
+    background-image: url(MapElements/Top-right-water.gif);
+}
+.bottom-left-water{
+    background-image: url(MapElements/Bottom-left-water.gif);
+}
+.bottom-right-water{
+    background-image: url(MapElements/Bottom-right-water.gif);
+}
+.center-water{
+    background-image: url(MapElements/water-center.gif);
+}
+.top-water{
+    background-image: url(MapElements/Water-top.gif);
+}
+.bottom-water{
+    background-image: url(MapElements/Water-bottom.gif);
+}
+.left-water{
+    background-image: url(MapElements/Water-left.gif);
+}
+.right-water{
+    background-image: url(MapElements/Water-right.gif);
+}
+/* Original assets
+.left-wall{
+    background-image: url(images/rfDoaa1.png);
+}
+.top-wall{
+    background-image: url(images/QA257Bj.png);
+}
+.bottom-wall{
+    background-image: url(images/vWJWmvb.png);
+}
+.right-wall{
+    background-image: url(images/SmHhgUn.png);
+}
+.bottom-left-wall{
+    background-image: url(images/awnTfNC.png);
+}
+.bottom-right-wall{
+    background-image: url(images/84oyTFy.png);
+}
+.top-left-wall{
+    background-image: url(images/xlpUxIm.png);
+}
+.top-right-wall{
+    background-image: url(images/z0OmBd1.jpg);
+}
+.top-door{
+    background-image: url(images/U9nre4n.png);
+}
+.left-door{
+    background-image: url(images/okdJNls.png);
+}
+.stairs{
+    background-image: url(images/VghkL08.png);
+}
+.firepot{
+    background-image: url(images/I7xSp7w.png);
+}
+.lantern{
+    background-image: url(images/wiSiY09.png);
+}
+*/
+.slicer, .skeletor{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    z-index: 5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.gabriela{
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    z-index: 5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*
+.slicer{
+    background-image: url(images/c6JFi5Z.png);
+}
+    .skeletor{
+    background-image: url(images/Ei1VnX8.png);
+}
+    */
+
+.slicer{
+    background-image: url(Enemies/Eduardo.gif);
+}
+
+.skeletor{
+    background-image: url(Enemies/Lara-raj.gif);
+}
+
+.gabriela{
+    background-image: url(Enemies/Gabriela.gif);
+}
+
+.shooter{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    z-index: 5;
+    background-image: url(Enemies/Shooter.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.projectile{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    z-index: 12;
+    background-image: url(images/o9WizfI.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.kaboom{
+    /*background-image: url(images/o9WizfI.png);*/
+    background-image: url(MainCharacter/Slice.gif);
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    z-index: 15;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+
+#temp-message{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 180px;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    border-radius: 8px;
+    pointer-events: none;
+    z-index: 20;
+}
